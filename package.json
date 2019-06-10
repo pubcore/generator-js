@@ -1,0 +1,33 @@
+{
+  "name": "@pubcore/generator-js",
+  "version": "1.0.0",
+  "description": "Yeomnan generator to create scaffolding for js package",
+  "files": [
+    "app"
+  ],
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pubcore/generator-js.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "pubcore",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-plugin-mocha": "^5.3.0",
+    "mocha": "^6.0.1",
+    "yeoman-test": "^1.9.1"
+  },
+  "dependencies": {
+    "update-notifier": "^2.5.0",
+    "yeoman-generator": "^3.2.0"
+  }
+}
