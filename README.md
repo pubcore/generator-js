@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pubcore/createPackage.svg?branch=master)](https://travis-ci.org/pubcore/createPackage)
+[![Build Status](https://travis-ci.org/pubcore/generator-js.svg?branch=master)](https://travis-ci.org/pubcore/generator-js)
 
 ## Commandline tool to scaffolding new packages
 
