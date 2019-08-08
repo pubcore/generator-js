@@ -1,6 +1,10 @@
 {
 	"name": "<%= name %>",
 	"description": "<%= description %>",
+	"repository": {
+		"type": "git",
+		"url": "<%= repository %>"
+	},
 	"author": "<%= author %>",
 	"scripts":{
 		"test":"nyc --reporter=text mocha --inspect --require @babel/register --require source-map-support --recursive",
@@ -12,11 +16,11 @@
 	"main":"js/index.js",
 	"license":"<%= license %>",
 	"babel": {
-        "presets": [
-            "@babel/preset-env"
-        ],
-        "plugins": [
-            "@babel/plugin-proposal-object-rest-spread"
-        ]
-    }
+		"presets": [
+			"@babel/preset-env"
+		],
+		"plugins": [
+			"@babel/plugin-proposal-object-rest-spread"
+		]
+	}
 }
