@@ -14,23 +14,16 @@ module.exports = class extends Generator {
 	}
 	async prompting() {
 		this.answers = await this.prompt([{
-			type:'input', name:'name',
-			message:'Your project name',
+			type:'input', name:'name', message:'Your project name',
 			default:() => `@${this.scope}/${this.appname.replace(/\s+/g, '-')}`
 		},{
-			type:'input', name:'description',
-			message: 'Package description',
+			type:'input', name:'description', message: 'Package description',
 		},{
-			type:'input', name:'license',
-			default: 'MIT',
-			message: 'License',
+			type:'input', name:'license', default: 'MIT', message: 'License',
 		},{
-			type:'input', name:'author',
-			default: () => this.scope,
-			message: 'Author',
+			type:'input', name:'author', default: () => this.scope, message: 'Author',
 		},{
-			type:'input', name:'repository',
-			message: 'Repository uri',
+			type:'input', name:'repository', message: 'Repository uri',
 		}])
 	}
 	writing(){
@@ -62,8 +55,7 @@ module.exports = class extends Generator {
 		this.log('Install packages ...')
 		this.npmInstall([
 			'@babel/core', '@babel/cli', '@babel/preset-env', '@babel/register',
-			'@babel/plugin-proposal-object-rest-spread', 'eslint', 'mocha', 'nyc',
-			'eslint-plugin-mocha'
+			'eslint', 'mocha', 'nyc', 'eslint-plugin-mocha'
 		], {'save-dev': true })
 	}
 }
