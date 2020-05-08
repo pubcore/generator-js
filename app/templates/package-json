@@ -1,23 +1,23 @@
 {
-	"name": "<%= name %>",
-	"description": "<%= description %>",
-	"repository": {
-		"type": "git",
-		"url": "<%= repository %>"
-	},
-	"author": "<%= author %>",
-	"scripts":{
-		"test":"nyc --reporter=text mocha --inspect --require @babel/register --require source-map-support --recursive",
-		"build":"babel src --out-dir js",
-		"prepare":"npm run build",
-		"watch": "babel --watch src --out-dir js",
-		"coverage": "nyc report --reporter=text-lcov"
-	},
-	"main":"js/index.js",
-	"license":"<%= license %>",
-	"babel": {
-		"presets": [
-			"@babel/preset-env"
-		]
-	}
+  "name": "<%= name %>",
+  "description": "<%= description %>",
+  "repository": {
+    "type": "git",
+    "url": "<%= repository %>"
+  },
+  "author": "<%= author %>",
+  "scripts":{
+    "test":"nyc --reporter=text mocha --inspect --require @babel/register --require source-map-support --recursive",
+    "build":"babel src --out-dir js",
+    "prepare":"npm run build",
+    "watch": "babel --watch src --out-dir js",
+    "coverage": "nyc report --reporter=text-lcov"
+  },
+  "main":"js/index.js",
+  "license":"<%= license %>",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
 }
