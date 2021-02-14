@@ -6,14 +6,15 @@
 
 - latest version of nodejs
 - latest version of npm
+- git
 
-### Yeoman generator to create a package scaffolding for ECMAScript, with
+### Yeoman generator to create a package scaffolding for ECMAScript 2021, with
 
 - eslint
 - prettier with husky pre-commit hook
 - transpiler via esbuild
 - running tests via mocha
-- running show code coverage after test run
+- sho code coverage after test run with nyc
 
 ### Install it global
 
@@ -41,5 +42,4 @@ cd new-project
 yo @pubcore/js
 ```
 
-4. (optional) if your code already exists, copy it into src/index.js.
-   (Keep the entry point file 'src/index.js' because of config dependencies)
+4. (optional) if your code already exists, copy it into src/app.mjs.

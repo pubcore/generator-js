@@ -53,18 +53,6 @@ module.exports = class extends Generator {
       this.templatePath('_npmignore'),
       this.destinationPath('.npmignore')
     )
-    this.fs.copy(
-      this.templatePath('_eslintignore'),
-      this.destinationPath('.eslintignore')
-    )
-    this.fs.copy(
-      this.templatePath('_prettierignore'),
-      this.destinationPath('.prettierignore')
-    )
-    this.fs.copy(
-      this.templatePath('_prettierrc-json'),
-      this.destinationPath('.prettierrc.json')
-    )
     this.fs.copyTpl(
       this.templatePath('package-json'),
       this.destinationPath('package.json'),
@@ -72,7 +60,6 @@ module.exports = class extends Generator {
     )
   }
   install() {
-    this.log('Install packages ...')
     this.spawnCommandSync('npm', [
       'i',
       '-D',
@@ -84,7 +71,11 @@ module.exports = class extends Generator {
       'nyc',
       'husky',
       'prettier',
+      'eslint-config-prettier',
     ])
-    this.spawnCommandSync('npx', ['eslint', '--init'])
+    this.spawnCommandSync('git', ['init'])
+    this.spawnCommandSync('git', ['add', '.'])
+    this.spawnCommandSync('git', ['commit', '-m', 'init'])
+    this.spawnCommandSync('npx', ['husky', 'install'])
   }
 }

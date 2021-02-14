@@ -11,6 +11,6 @@ require('estrella')
     bundle: true,
     outfile: `public/app-${version}.js`,
     inject: ['build-inject.js'],
-    loader: { '.js': 'jsx' },
+    loader: { '.mjs': 'jsx' },
   })
   .catch(() => process.exit(1))

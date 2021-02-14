@@ -12,13 +12,16 @@
     "build": "cross-env NODE_ENV=production node build",
     "prepare":"npm run build",
     "watch": "cross-env NODE_ENV=development node build -watch",
-    "coverage": "nyc report --reporter=text-lcov",
-    "postinstall": "husky install"
+    "coverage": "nyc report --reporter=text-lcov"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "**/*.js": "eslint . --fix"
   },
   "main":"js/app.js",
   "license":"<%= license %>",
